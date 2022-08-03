@@ -26,11 +26,11 @@ function Navbar() {
         <Menu.Item icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
         </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
-          <Link to="/exchanges">Exchange</Link>
-        </Menu.Item>
         <Menu.Item icon={<FundOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+        </Menu.Item>
+        <Menu.Item icon={<MoneyCollectOutlined />}>
+          <Link to="/exchanges">Exchange</Link>
         </Menu.Item>
         <Menu.Item icon={<BulbOutlined />}>
           <Link to="/news">News</Link>
