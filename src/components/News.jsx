@@ -3,6 +3,7 @@ import { Select, Typography, Row, Col, Avatar, Card } from "antd";
 import moment from "moment";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import { useGetCryptosQuery } from "../services/cryptoApi";
+import Loader from "./Loader";
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -15,7 +16,7 @@ const News = ({ simplified }) => {
   });
   const { data } = useGetCryptosQuery(100);
   console.log(cryptoNews);
-  if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews?.value) return <Loader />;
 
   const demoImage =
     "https://media.istockphoto.com/photos/bitcoin-cryptocurrency-trends-graphs-and-charts-picture-id1294303237?k=20&m=1294303237&s=612x612&w=0&h=0-igz1A4-GdGa-ApF4Mvyxc4-NLjcZ6DFNWW4ptVFYA=";
@@ -45,13 +46,14 @@ const News = ({ simplified }) => {
         cryptoNews.value.map((news, i) => (
           <Col xs={24} md={12} lg={8} key={i}>
             <Card hoverable className="news-card">
+            {/* eslint-disable-next-line */}
               <a href={news.url} target="_blank" rel="noreferred">
                 <div className="news-image-container">
                   <Title className="news-title" level={4}>
                     {news.name}
                   </Title>
                   <img
-                  style={{maxWidth: "200px", maxHeight: "100px"}}
+                    style={{ maxWidth: "200px", maxHeight: "100px" }}
                     src={news?.image?.thumbnail?.contentUrl || demoImage}
                     alt="news"
                   />
