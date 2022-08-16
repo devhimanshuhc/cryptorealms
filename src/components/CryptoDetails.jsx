@@ -81,7 +81,7 @@ const CryptoDetails = () => {
     {
       title: "Total Supply",
       value: `$ ${
-        cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)
+        cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total) 
       }`,
       icon: <ExclamationCircleOutlined />,
     },

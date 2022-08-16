@@ -44,7 +44,7 @@ function Navbar() {
         </Button>
       </div>
       {activeMenu && (
-        <Menu theme="dark">
+        <Menu theme="dark" onClick={() => setActiveMenu(!activeMenu)}>
           <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
