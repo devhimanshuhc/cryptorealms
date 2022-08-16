@@ -55,7 +55,7 @@ const Homepage = () => {
 
       <div className="home-heading-container">
         <Title level={2} className="home-title">
-          Top 10  Crypto Currencies in the world
+          Top 10 Crypto Currencies in the world
         </Title>
         <Title level={3} className="show-more">
           <Link to="/cryptocurrencies">Show More</Link>
