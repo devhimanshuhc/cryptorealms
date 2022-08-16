@@ -44,7 +44,16 @@ function Navbar() {
         </Button>
       </div>
       {activeMenu && (
-        <Menu theme="dark" onClick={() => setActiveMenu(!activeMenu)}>
+        <Menu
+          theme="dark"
+          onClick={() => {
+            if (screenSize < 760) {
+              setActiveMenu(!activeMenu);
+            } else {
+              console.log(".");
+            }
+          }}
+        >
           <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
